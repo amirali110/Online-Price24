@@ -119,7 +119,7 @@ QVariantList MainWindow::forex(){
 
     GET symbol4("https://twelve-data1.p.rapidapi.com/price?symbol=XAG/USD");
 
-    doc=QJsonDocument::fromJson(symbol4.Get_Reply("x-rapidapi-key","91c969a8e9msh8b47ffbad7457eep11a88ajsnc07f9fe9120e"));
+    doc=QJsonDocument::fromJson(symbol4.Get_Reply("x-rapidapi-key",api_key));
     obj=doc.object();
     list.append(obj.value("price"));
 
